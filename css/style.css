@@ -41,8 +41,8 @@ h1, h2, h3, h4, .logo-font, .serif {
   border-radius: 28px;
   transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
   border: 1px solid rgba(44, 94, 47, 0.08);
-  overflow: hidden;
-  position: relative; /* 🔥 needed for badge */
+  overflow: visible; /* 🔥 FIXED */
+  position: relative;
 }
 
 .product-card:hover {
@@ -51,19 +51,19 @@ h1, h2, h3, h4, .logo-font, .serif {
   border-color: rgba(44, 94, 47, 0.2);
 }
 
-/* BADGE (FIXED) */
+/* BADGE (FLOATING TOP) */
 .badge {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: -12px; /* 🔥 OUTSIDE CARD */
+  right: 16px;
   background: var(--green-deep);
   color: #fff;
   font-size: 12px;
   padding: 6px 12px;
   border-radius: 50px;
   font-weight: 600;
-  z-index: 10; /* 🔥 always on top */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 20;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
 
 /* IMAGE CONTAINER */
@@ -71,24 +71,29 @@ h1, h2, h3, h4, .logo-font, .serif {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 28px;
-  overflow: hidden;
+  overflow: hidden; /* keeps image rounded */
   padding: 0;
   background: none;
 }
 
-/* IMAGE FIX (BALANCED ZOOM) */
+/* IMAGE FIX (BALANCED) */
 .img-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transform: scale(1.03); /* 🔥 reduced zoom */
+  transform: scale(1.02); /* 🔥 balanced zoom */
   transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
 /* HOVER ZOOM */
 .product-card:hover .img-container img {
   transform: scale(1.06);
+}
+
+/* SPECIAL ZOOM OUT (for shampoo etc.) */
+.zoom-out {
+  transform: scale(0.97) !important;
 }
 
 /* COMBO SPECIAL */
