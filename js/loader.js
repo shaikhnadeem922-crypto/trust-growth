@@ -1,14 +1,35 @@
 // Page sections mapping
 const sections = {
-    home: '/sections/home.html',
-    about: '/sections/about.html',
-    products: '/sections/products.html',
-    reviews: '/sections/reviews.html',
-    faq: '/sections/faq.html',
-    contact: '/sections/contact.html'
+    home: 'sections/home.html',
+    about: 'sections/about.html',
+    products: 'sections/products.html',
+    reviews: 'sections/reviews.html',
+    faq: 'sections/faq.html',
+    contact: 'sections/contact.html'
 };
 
 let currentPage = 'home';
+
+// Function to attach navigation listeners (runs after each page load)
+function attachNavListeners() {
+    document.querySelectorAll('[data-nav]').forEach(link => {
+        // Remove old listener to avoid duplicates
+        link.removeEventListener('click', link._navHandler);
+        
+        const handler = (e) => {
+            e.preventDefault();
+            const page = link.getAttribute('data-nav');
+            if (page && sections[page]) {
+                loadPage(page);
+            }
+            const mobilePanel = document.getElementById('mobileMenuPanel');
+            if (mobilePanel) mobilePanel.classList.add('hidden');
+        };
+        
+        link.addEventListener('click', handler);
+        link._navHandler = handler;
+    });
+}
 
 // Function to load a section
 async function loadPage(pageName) {
@@ -29,6 +50,9 @@ async function loadPage(pageName) {
         if (pageName === 'faq') {
             initFaqAccordion();
         }
+        
+        // ✅ Re-attach listeners to buttons in newly loaded content
+        attachNavListeners();
         
         // Update active nav links
         document.querySelectorAll('.nav-link, .mobile-nav-link, footer a[data-nav]').forEach(link => {
@@ -55,14 +79,12 @@ function initFaqAccordion() {
     });
     
     document.querySelectorAll('.faq-question-btn').forEach(button => {
-        // Remove old listeners to avoid duplicates
         button.removeEventListener('click', button._listener);
         const handler = () => {
             const answerPanel = button.nextElementSibling;
             const icon = button.querySelector('.faq-icon');
             const isOpen = answerPanel.style.maxHeight !== '0px' && answerPanel.style.maxHeight !== '';
             
-            // Close others
             document.querySelectorAll('.faq-question-btn').forEach(otherBtn => {
                 if (otherBtn !== button) {
                     const otherPanel = otherBtn.nextElementSibling;
@@ -75,7 +97,6 @@ function initFaqAccordion() {
                 }
             });
             
-            // Toggle current
             if (!isOpen) {
                 answerPanel.style.maxHeight = answerPanel.scrollHeight + 'px';
                 answerPanel.style.borderTopColor = '#ede6dd';
@@ -90,20 +111,6 @@ function initFaqAccordion() {
         button._listener = handler;
     });
 }
-
-// Navigation event handlers
-document.querySelectorAll('[data-nav]').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const page = link.getAttribute('data-nav');
-        if (page && sections[page]) {
-            loadPage(page);
-        }
-        // Close mobile menu if open
-        const mobilePanel = document.getElementById('mobileMenuPanel');
-        if (mobilePanel) mobilePanel.classList.add('hidden');
-    });
-});
 
 // Mobile menu toggle
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
