@@ -1,9 +1,11 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BODY */
 body {
   font-family: 'Inter', sans-serif;
   background: #fefaf5;
@@ -15,12 +17,14 @@ h1, h2, h3, h4, .logo-font, .serif {
   font-family: 'Playfair Display', serif;
 }
 
+/* COLORS */
 :root {
   --green-deep: #2c5e2f;
   --green-soft: #e9f3e6;
   --cream: #fefaf5;
 }
 
+/* BUTTON */
 .btn-primary {
   background: var(--green-deep);
   transition: all 0.25s ease;
@@ -31,11 +35,13 @@ h1, h2, h3, h4, .logo-font, .serif {
   transform: translateY(-2px);
 }
 
+/* PRODUCT CARD */
 .product-card {
   background: white;
   border-radius: 28px;
   transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
   border: 1px solid rgba(44, 94, 47, 0.08);
+  overflow: hidden; /* 🔥 ensures perfect rounded corners */
 }
 
 .product-card:hover {
@@ -44,33 +50,42 @@ h1, h2, h3, h4, .logo-font, .serif {
   border-color: rgba(44, 94, 47, 0.2);
 }
 
+/* IMAGE CONTAINER (FIXED) */
 .img-container {
   width: 100%;
-  background: #fefcf9;
-  border-radius: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
   aspect-ratio: 1 / 1;
-  padding: 1.2rem;
+  border-radius: 28px;
+  overflow: hidden;
+  padding: 0; /* removed gap */
+  background: none;
+  position: relative;
 }
 
+/* IMAGE FIX */
 .img-container img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover; /* 🔥 main fix */
+  display: block;
+  transform: scale(1.08); /* 🔥 fixes small-looking images */
   transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
+/* HOVER ZOOM */
+.product-card:hover .img-container img {
+  transform: scale(1.12);
+}
+
+/* COMBO SPECIAL ZOOM */
 .combo-zoom {
   transition: transform 0.4s ease;
 }
 
 .product-card.featured:hover .combo-zoom {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
+/* ABOUT IMAGE */
 .about-img-fixed {
   width: 100%;
   height: 100%;
@@ -86,6 +101,7 @@ h1, h2, h3, h4, .logo-font, .serif {
   background: #e9f3e6;
 }
 
+/* NAV */
 .nav-link {
   position: relative;
   font-weight: 500;
@@ -107,6 +123,7 @@ h1, h2, h3, h4, .logo-font, .serif {
   border-radius: 4px;
 }
 
+/* WHATSAPP FLOAT */
 .wa-float {
   position: fixed;
   bottom: 1.8rem;
@@ -124,6 +141,7 @@ h1, h2, h3, h4, .logo-font, .serif {
   background: #20b859;
 }
 
+/* TESTIMONIAL */
 .testimonial-card {
   background: white;
   border-radius: 1.5rem;
@@ -136,6 +154,7 @@ h1, h2, h3, h4, .logo-font, .serif {
   box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.1);
 }
 
+/* INGREDIENT TAG */
 .ingredient-badge {
   background: rgba(44, 94, 47, 0.08);
   border-radius: 100px;
@@ -145,12 +164,14 @@ h1, h2, h3, h4, .logo-font, .serif {
   color: var(--green-deep);
 }
 
+/* GRID */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 2rem;
 }
 
+/* MARQUEE */
 @keyframes marquee {
   0% {
     transform: translateX(0%);
