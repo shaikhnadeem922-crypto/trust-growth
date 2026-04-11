@@ -66,37 +66,34 @@ h1, h2, h3, h4, .logo-font, .serif {
   box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
 
-/* IMAGE CONTAINER (HOME) */
+/* IMAGE CONTAINER (NO SHADE) */
 .img-container {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 28px;
   overflow: hidden;
-  background: #f3efe9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: none; /* 🔥 removed shade */
 }
 
-/* IMAGE DEFAULT */
+/* IMAGE FULL COVER */
 .img-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transform: scale(1.02);
-  transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  transform: scale(1.05); /* 🔥 fills edges */
+  transition: transform 0.4s ease;
   border-radius: 28px;
 }
 
-/* HOVER */
+/* HOVER EFFECT */
 .product-card:hover .img-container img {
-  transform: scale(1.06);
+  transform: scale(1.08);
 }
 
 /* SHAMPOO ZOOM OUT */
 .zoom-out {
-  transform: scale(0.80) !important; /* 🔥 stronger zoom out */
+  transform: scale(0.90) !important;
 }
 
 /* COMBO */
@@ -105,7 +102,7 @@ h1, h2, h3, h4, .logo-font, .serif {
 }
 
 .product-card.featured:hover .combo-zoom {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 /* ========================= */
@@ -116,14 +113,15 @@ h1, h2, h3, h4, .logo-font, .serif {
   width: 100%;
   border-radius: 28px;
   overflow: hidden;
-  background: #f3efe9;
+  background: none; /* 🔥 removed shade */
 }
 
 .product-image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 28px !important;
+  transform: scale(1.05);
+  border-radius: 28px;
 }
 
 /* EXTRA SAFETY */
