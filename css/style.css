@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #fefaf5;
+  color: #1e2a1e;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .logo-font, .serif {
+  font-family: 'Playfair Display', serif;
+}
+
+:root {
+  --green-deep: #2c5e2f;
+  --green-soft: #e9f3e6;
+  --cream: #fefaf5;
+}
+
+.btn-primary {
+  background: var(--green-deep);
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: #1f4522;
+  transform: translateY(-2px);
+}
+
+.product-card {
+  background: white;
+  border-radius: 28px;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  border: 1px solid rgba(44, 94, 47, 0.08);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.12);
+  border-color: rgba(44, 94, 47, 0.2);
+}
+
+.img-container {
+  width: 100%;
+  background: #fefcf9;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  padding: 1.2rem;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.combo-zoom {
+  transition: transform 0.4s ease;
+}
+
+.product-card.featured:hover .combo-zoom {
+  transform: scale(1.05);
+}
+
+.about-img-fixed {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 28px;
+}
+
+.about-img-wrapper {
+  aspect-ratio: 4/3;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #e9f3e6;
+}
+
+.nav-link {
+  position: relative;
+  font-weight: 500;
+}
+
+.nav-link.active {
+  color: var(--green-deep);
+  font-weight: 600;
+}
+
+.nav-link.active:after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--green-deep);
+  border-radius: 4px;
+}
+
+.wa-float {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.8rem;
+  z-index: 50;
+  background: #25D366;
+  border-radius: 60px;
+  padding: 12px;
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.3);
+  transition: 0.2s;
+}
+
+.wa-float:hover {
+  transform: scale(1.07);
+  background: #20b859;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 1.5rem;
+  transition: all 0.2s;
+  border: 1px solid #f0e8de;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.1);
+}
+
+.ingredient-badge {
+  background: rgba(44, 94, 47, 0.08);
+  border-radius: 100px;
+  padding: 0.25rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--green-deep);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 24s linear infinite;
+}
