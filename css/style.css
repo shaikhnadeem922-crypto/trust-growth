@@ -66,34 +66,36 @@ h1, h2, h3, h4, .logo-font, .serif {
   box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
 
-/* IMAGE CONTAINER (NO SHADE) */
-.img-container {
+/* IMAGE CONTAINER (NO SHADE ANYWHERE) */
+.img-container,
+.product-image-wrapper {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 28px;
   overflow: hidden;
-  background: none; /* 🔥 removed shade */
+  background: none !important; /* 🔥 removed shade globally */
 }
 
 /* IMAGE FULL COVER */
-.img-container img {
+.img-container img,
+.product-image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transform: scale(1.05); /* 🔥 fills edges */
+  transform: scale(1.06); /* 🔥 fills full space */
   transition: transform 0.4s ease;
   border-radius: 28px;
 }
 
 /* HOVER EFFECT */
 .product-card:hover .img-container img {
-  transform: scale(1.08);
+  transform: scale(1.09);
 }
 
-/* SHAMPOO ZOOM OUT */
+/* SHAMPOO EXTRA ZOOM OUT */
 .zoom-out {
-  transform: scale(0.90) !important;
+  transform: scale(0.82) !important; /* 🔥 more zoom out */
 }
 
 /* COMBO */
@@ -103,31 +105,6 @@ h1, h2, h3, h4, .logo-font, .serif {
 
 .product-card.featured:hover .combo-zoom {
   transform: scale(1.06);
-}
-
-/* ========================= */
-/* PRODUCT PAGE IMAGE FIX */
-/* ========================= */
-
-.product-image-wrapper {
-  width: 100%;
-  border-radius: 28px;
-  overflow: hidden;
-  background: none; /* 🔥 removed shade */
-}
-
-.product-image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.05);
-  border-radius: 28px;
-}
-
-/* EXTRA SAFETY */
-.product-image-wrapper img,
-.img-container img {
-  border-radius: 28px !important;
 }
 
 /* ABOUT */
