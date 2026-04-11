@@ -11,7 +11,7 @@
   <meta name="author" content="Trust Growth Herbal">
   <meta name="robots" content="index, follow">
   
-  <!-- Open Graph Tags (for WhatsApp, Instagram, Facebook sharing) -->
+  <!-- Open Graph Tags -->
   <meta property="og:title" content="Trust Growth Herbal - Stop Hair Fall Naturally">
   <meta property="og:description" content="100% herbal hair oil and shampoo. Trusted by 1000+ customers. Order on WhatsApp.">
   <meta property="og:url" content="https://trustgrowthherbal.co.in/">
@@ -34,135 +34,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0,1" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #fefaf5;
-      color: #1e2a1e;
-      overflow-x: hidden;
-    }
-    h1, h2, h3, h4, .logo-font, .serif {
-      font-family: 'Playfair Display', serif;
-    }
-    :root {
-      --green-deep: #2c5e2f;
-      --green-soft: #e9f3e6;
-      --cream: #fefaf5;
-    }
-    .btn-primary {
-      background: var(--green-deep);
-      transition: all 0.25s ease;
-    }
-    .btn-primary:hover {
-      background: #1f4522;
-      transform: translateY(-2px);
-    }
-    .product-card {
-      background: white;
-      border-radius: 28px;
-      transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
-      border: 1px solid rgba(44,94,47,0.08);
-    }
-    .product-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 25px 35px -12px rgba(0,0,0,0.12);
-      border-color: rgba(44,94,47,0.2);
-    }
-    .img-container {
-      width: 100%;
-      background: #fefcf9;
-      border-radius: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      aspect-ratio: 1 / 1;
-      padding: 1.2rem;
-    }
-    .img-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-    }
-    .combo-zoom {
-      transition: transform 0.4s ease;
-    }
-    .product-card.featured:hover .combo-zoom {
-      transform: scale(1.05);
-    }
-    .about-img-fixed {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 30%;
-      border-radius: 28px;
-    }
-    .about-img-wrapper {
-      aspect-ratio: 4/3;
-      border-radius: 28px;
-      overflow: hidden;
-      background: #e9f3e6;
-    }
-    .nav-link {
-      position: relative;
-      font-weight: 500;
-    }
-    .nav-link.active {
-      color: var(--green-deep);
-      font-weight: 600;
-    }
-    .nav-link.active:after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: var(--green-deep);
-      border-radius: 4px;
-    }
-    .wa-float {
-      position: fixed;
-      bottom: 1.8rem;
-      right: 1.8rem;
-      z-index: 50;
-      background: #25D366;
-      border-radius: 60px;
-      padding: 12px;
-      box-shadow: 0 8px 22px rgba(37,211,102,0.3);
-      transition: 0.2s;
-    }
-    .wa-float:hover { transform: scale(1.07); background: #20b859; }
-    .testimonial-card {
-      background: white;
-      border-radius: 1.5rem;
-      transition: all 0.2s;
-      border: 1px solid #f0e8de;
-    }
-    .testimonial-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px -12px rgba(0,0,0,0.1);
-    }
-    .ingredient-badge {
-      background: rgba(44,94,47,0.08);
-      border-radius: 100px;
-      padding: 0.25rem 1rem;
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: var(--green-deep);
-    }
-    /* Product grid for future additions */
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 2rem;
-    }
-  </style>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
+<!-- WhatsApp Float Button -->
 <a href="https://wa.me/919768244679" class="wa-float" aria-label="Chat on WhatsApp">
   <span class="material-symbols-outlined text-white text-2xl">chat</span>
 </a>
@@ -186,405 +62,37 @@
       </div>
     </div>
     <div id="mobileMenuPanel" class="hidden md:hidden flex-col bg-white border-t border-[#eee2d6] py-4 px-5 space-y-3">
-      <a href="#" data-nav="home" class="mobile-nav-link py-2 text-gray-800 font-medium">Home</a>
-      <a href="#" data-nav="about" class="mobile-nav-link py-2 text-gray-800 font-medium">About</a>
-      <a href="#" data-nav="products" class="mobile-nav-link py-2 text-gray-800 font-medium">Products</a>
-      <a href="#" data-nav="reviews" class="mobile-nav-link py-2 text-gray-800 font-medium">Reviews</a>
-      <a href="#" data-nav="faq" class="mobile-nav-link py-2 text-gray-800 font-medium">FAQ</a>
-      <a href="#" data-nav="contact" class="mobile-nav-link py-2 text-gray-800 font-medium">Contact</a>
-      <a href="https://wa.me/919768244679" class="bg-[#2c5e2f] text-white text-center py-2.5 rounded-full mt-2 font-semibold">Order on WhatsApp</a>
+      <a href="#" data-nav="home" class="mobile-nav-link py-2 text-gray-800 font-medium block">Home</a>
+      <a href="#" data-nav="about" class="mobile-nav-link py-2 text-gray-800 font-medium block">About</a>
+      <a href="#" data-nav="products" class="mobile-nav-link py-2 text-gray-800 font-medium block">Products</a>
+      <a href="#" data-nav="reviews" class="mobile-nav-link py-2 text-gray-800 font-medium block">Reviews</a>
+      <a href="#" data-nav="faq" class="mobile-nav-link py-2 text-gray-800 font-medium block">FAQ</a>
+      <a href="#" data-nav="contact" class="mobile-nav-link py-2 text-gray-800 font-medium block">Contact</a>
+      <a href="https://wa.me/919768244679" class="bg-[#2c5e2f] text-white text-center py-2.5 rounded-full mt-2 font-semibold block">Order on WhatsApp</a>
     </div>
   </nav>
 
-  <div class="bg-gradient-to-r from-amber-700 to-amber-800 text-white text-center py-2.5 text-sm font-medium flex justify-center items-center gap-2">
-    <span class="material-symbols-outlined text-base animate-pulse">local_fire_department</span> LIMITED BATCH: Only 30% stock left — Order via WhatsApp 
-    <span class="material-symbols-outlined text-base">schedule</span> Ships within 24hrs
+  <!-- Top Banner -->
+  <div class="bg-gradient-to-r from-amber-700 to-amber-800 text-white text-center py-2.5 text-sm font-medium flex justify-center items-center gap-2 flex-wrap">
+    <span class="material-symbols-outlined text-base animate-pulse">local_fire_department</span> LIMITED BATCH: Only 30% stock left — Order via WhatsApp <span class="material-symbols-outlined text-base">schedule</span> Ships within 24hrs
   </div>
 
   <main>
-    <!-- HOME PAGE -->
-    <div id="page-home" class="page-content">
-      <section class="pt-12 md:pt-20 pb-8 px-5 max-w-7xl mx-auto">
-        <div class="flex flex-col lg:flex-row items-center gap-12">
-          <div class="flex-1 space-y-5">
-            <div class="inline-flex items-center gap-2 bg-[#e9f3e6] text-[#2c5e2f] px-4 py-1.5 rounded-full text-sm font-semibold"><span class="material-symbols-outlined text-base">verified</span> Trusted by 1000+ happy customers</div>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Stop Hair Fall Naturally with <span class="text-[#2c5e2f] italic">Trust Growth</span></h1>
-            <p class="text-gray-600 text-lg max-w-xl">100% Herbal Hair Oil & Shampoo for Strong, Thick & Healthy Hair — crafted with heritage botanical wisdom.</p>
-            <div class="flex flex-wrap gap-4 pt-2"><a href="https://wa.me/919768244679" class="bg-[#2c5e2f] text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 shadow-md"> <span class="material-symbols-outlined">chat</span> Order on WhatsApp</a><a href="#apothecary-grid" class="border border-gray-300 px-6 py-3 rounded-full font-semibold text-gray-700 hover:bg-gray-50 view-products-btn">View Products ↓</a></div>
-            <div class="flex flex-wrap gap-5 pt-3 text-sm text-gray-500"><div class="flex items-center gap-1"><span class="material-symbols-outlined text-[#2c5e2f]">eco</span> 100% Natural</div><div class="flex items-center gap-1"><span class="material-symbols-outlined text-[#2c5e2f]">science_off</span> No Chemicals</div><div class="flex items-center gap-1"><span class="material-symbols-outlined text-[#2c5e2f]">local_shipping</span> Fast Delivery</div></div>
-            <div class="flex items-center gap-3 pt-2"><span class="text-yellow-500 flex text-lg">★★★★★</span><span class="text-sm font-medium">4.9/5 from 1000+ reviews</span></div>
-          </div>
-          <div class="flex-1 flex justify-center"><div class="w-full max-w-md aspect-square rounded-[42%_58%_55%_45%_/_48%_45%_55%_52%] overflow-hidden bg-[#e3f0df] shadow-xl"><img src="https://lh3.googleusercontent.com/aida/ADBb0uiTSsXPDag3dxfE9HQICn1s392EIAcB20aFxyTvAMA3hZzDQ4QxOWYi7d0GQmjbwxUxjVxsWIBH9ZOrIEtUIw3PZQK4gvwEbl4AptCYVbfSiv2bOLG2UaxMPq4-Huh0qdljnzdSmrMRdo_5QRS1ujGVb0GVi1X1N9Q0hPxr-JkSJQ8OM4FKCv9rDzMcRW4TsyKJaxfSgv7el-Kx-uPjpGNnVHozcqvbu1fpO9rADiGitHNPMYul0OvTeDhmSDAC3r_9MEPnEAAQK4o" alt="Trust Growth Herbal Oil" class="w-full h-full object-cover"></div></div>
-        </div>
-      </section>
-
-       <!-- marquee strip -->
-      <div class="bg-[#2c5e2f] text-white py-3 overflow-hidden whitespace-nowrap">
-        <div class="inline-flex animate-marquee gap-8 text-sm font-medium uppercase tracking-wide" style="animation: marquee 20s linear infinite;"> <span>🌿 100% Herbal</span> <span>✦</span> <span>💧 Sulphate-Free</span> <span>✦</span> <span>⭐ 1000+ Happy Customers</span> <span>✦</span> <span>🌸 Paraben-Free</span> <span>✦</span> <span>⚡ Fast Delivery</span> <span>✦</span> <span>🌱 No Side Effects</span> <span>✦</span> </div>
-      </div>
-      <style> @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } } .animate-marquee { animation: marquee 24s linear infinite; } </style>
-
-      <!-- problem + solution -->
-      <section class="py-20 px-5 bg-[#f9f5ef]">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div><span class="text-sm font-bold text-[#2c5e2f] tracking-wider border-l-4 border-[#2c5e2f] pl-3">THE PROBLEM</span><h2 class="text-3xl md:text-4xl font-serif font-bold mt-3">Facing hair fall, dandruff, or weak hair?</h2><p class="text-gray-600 mt-4">Modern living, pollution, and chemical-heavy products strip your hair’s vitality.</p><div class="mt-6 space-y-4"><div class="flex gap-3 bg-white p-4 rounded-xl shadow-sm"><span class="material-symbols-outlined text-red-500">cancel</span><p class="text-gray-600">Chronic scalp dryness and embarrassing flaking</p></div><div class="flex gap-3 bg-white p-4 rounded-xl shadow-sm"><span class="material-symbols-outlined text-red-500">cancel</span><p class="text-gray-600">Visible hair fall during combing — losing more than you should</p></div><div class="flex gap-3 bg-white p-4 rounded-xl shadow-sm"><span class="material-symbols-outlined text-red-500">cancel</span><p class="text-gray-600">Brittle, lifeless hair that breaks easily</p></div></div></div>
-          <div class="bg-[#2c5e2f] text-white p-8 md:p-10 rounded-3xl"><h3 class="text-2xl font-serif font-bold">Our herbal formula nourishes your scalp naturally.</h3><p class="mt-3 text-white/80">Cold-pressed botanical extracts penetrate deep into roots, stimulating growth without side effects.</p><div class="grid grid-cols-2 gap-5 mt-8"><div><div class="text-sm uppercase opacity-70">Sourcing</div><div class="font-bold text-xl">Organic Herbs</div></div><div><div class="text-sm uppercase opacity-70">Process</div><div class="font-bold text-xl">Cold-Pressed</div></div><div><div class="text-sm uppercase opacity-70">Results</div><div class="font-bold text-xl">3–4 Weeks</div></div><div><div class="text-sm uppercase opacity-70">Satisfaction</div><div class="font-bold text-xl">98%</div></div></div></div>
-        </div>
-      </section>
-
-      <!-- Apothecary product grid on homepage -->
-      <section id="apothecary-grid" class="py-16 px-5 max-w-7xl mx-auto scroll-mt-20">
-        <div class="text-center mb-12"><span class="text-sm font-bold text-[#2c5e2f] tracking-wider bg-[#e9f3e6] px-4 py-1 rounded-full">The Trust Growth Apothecary</span><h2 class="text-3xl md:text-4xl font-serif font-bold mt-3">Simple, effective, and ethically crafted for your ritual.</h2></div>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="product-card p-6 flex flex-col"><div class="img-container"><img src="https://lh3.googleusercontent.com/aida/ADBb0uhKce0bP1rugjGP38NCX4GQivPw5zfdrmwPzKWBKpUIPpvyWjN8MIwI1pAgK9lwTlpt2VgBeW2YKCNYHn_Hh0C9i8dOzgkopFm68lpTwFEn87XgaY5IXLRjKhENFlOe107msk4OIlo5cMJJ2UHHryash3f8bJlYBwaqriPX6ZeV8-rYjrnQVx7OHaLdL4eTZjzYc_gR5O_yzf9qSNggxkwpto1izj6qISpJhARYvppkZNhJVpMDhQC7N0VKOGQ0opJZn2cya3hpSVQ" alt="Herbal Hair Oil"></div><div class="mt-5"><div class="text-xs font-bold text-[#2c5e2f] uppercase">BEST FOR HAIR GROWTH</div><h3 class="text-2xl font-serif">Herbal Hair Oil</h3><p class="text-gray-500 text-sm mt-2">Deep penetration formula that revitalizes follicles and prevents premature graying.</p><div class="mt-5 flex justify-between items-center"><span class="text-2xl font-bold text-[#2c5e2f]">₹299</span><a href="https://wa.me/919768244679" class="border border-[#2c5e2f] text-[#2c5e2f] px-5 py-2 rounded-full text-sm font-semibold hover:bg-[#e9f3e6]">Order Now →</a></div></div></div>
-          <div class="product-card featured p-6 flex flex-col relative border-2 border-[#2c5e2f]"><div class="absolute -top-3 left-6 bg-[#2c5e2f] text-white text-xs px-3 py-1 rounded-full font-bold">🔥 FULL TREATMENT COURSE</div><div class="img-container"><img class="combo-zoom" src="https://lh3.googleusercontent.com/aida/ADBb0uiTSsXPDag3dxfE9HQICn1s392EIAcB20aFxyTvAMA3hZzDQ4QxOWYi7d0GQmjbwxUxjVxsWIBH9ZOrIEtUIw3PZQK4gvwEbl4AptCYVbfSiv2bOLG2UaxMPq4-Huh0qdljnzdSmrMRdo_5QRS1ujGVb0GVi1X1N9Q0hPxr-JkSJQ8OM4FKCv9rDzMcRW4TsyKJaxfSgv7el-Kx-uPjpGNnVHozcqvbu1fpO9rADiGitHNPMYul0OvTeDhmSDAC3r_9MEPnEAAQK4o" alt="Combo"></div><div class="mt-5"><div class="text-xs font-bold text-[#2c5e2f] uppercase">⭐ BEST VALUE</div><h3 class="text-2xl font-serif font-bold">Ultimate Combo Pack</h3><p class="text-gray-500 text-sm mt-2">The complete system. Includes both Oil & Shampoo for a comprehensive restoration journey.</p><div class="mt-5 flex justify-between items-center"><div><span class="text-2xl font-bold text-[#2c5e2f]">₹499</span> <span class="text-sm text-gray-400 line-through">₹548</span></div><a href="https://wa.me/919768244679" class="bg-[#2c5e2f] text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md">Grab Combo →</a></div></div></div>
-          <div class="product-card p-6 flex flex-col"><div class="img-container"><img src="https://lh3.googleusercontent.com/aida/ADBb0ugRB_yj7wWHqcn93FVPVk-SqUQTuZXJN70G7o4ptwqORWYJTx3H3IK9Ow1IVuFF40o6nIv8oodIgyZdGWpJOcPx285Ujo6wmH1kGXaT7d0Zu77Hm-gG5i1hNyPF6MTAorzyjRYOaqC5id49khtnrdijsDWbEOkPVb52hAu0qwYS4iwynOu8-Fu3GTWZ5r2P9JHyzrljwv8BZkxg-8yZmaviUjZaPgj7NhJHuy51GqfZcq4v7JN6_nf3f3M6iMgUi3BjMh6InZdg-X8" alt="Shampoo"></div><div class="mt-5"><div class="text-xs font-bold text-[#2c5e2f] uppercase">GENTLE DAILY CARE</div><h3 class="text-2xl font-serif">Herbal Shampoo</h3><p class="text-gray-500 text-sm mt-2">Sulphate-free cleansing that maintains natural oils while removing dirt and toxins gently.</p><div class="mt-5 flex justify-between items-center"><span class="text-2xl font-bold text-[#2c5e2f]">₹249</span><a href="https://wa.me/919768244679" class="border border-[#2c5e2f] text-[#2c5e2f] px-5 py-2 rounded-full text-sm font-semibold hover:bg-[#e9f3e6]">Order Now →</a></div></div></div>
-        </div>
-        
-        <!-- "View All Products" Button - links to Products Page -->
-        <div class="text-center mt-12">
-          <a href="#" data-nav="products" class="view-all-products-btn inline-flex items-center gap-2 bg-white border-2 border-[#2c5e2f] text-[#2c5e2f] hover:bg-[#2c5e2f] hover:text-white transition-all duration-300 px-8 py-3 rounded-full font-semibold text-lg shadow-md">
-            <span class="material-symbols-outlined">storefront</span>
-            View All Products
-            <span class="material-symbols-outlined text-sm">arrow_forward</span>
-          </a>
-          <p class="text-sm text-gray-500 mt-3">✨ More exciting products coming soon — check back often!</p>
-        </div>
-
-        <div class="mt-12 text-center bg-amber-50 rounded-2xl p-5 border border-amber-200"><p class="flex items-center justify-center gap-2 text-amber-800 font-semibold"><span class="material-symbols-outlined">inventory_2</span> Only 30% stock remaining — Online payment only via WhatsApp.</p><a href="https://wa.me/919768244679" class="inline-flex items-center gap-1 mt-3 text-[#2c5e2f] font-semibold underline">Order on WhatsApp now →</a></div>
-      </section>
-    </div>
-
-    <!-- ABOUT PAGE -->
-    <div id="page-about" class="page-content hidden">
-      <section class="py-16 px-5 max-w-7xl mx-auto">
-        <div class="text-center mb-12"><span class="text-sm font-bold text-[#2c5e2f] uppercase tracking-wider bg-[#e9f3e6] px-4 py-1 rounded-full">Our Story</span><h1 class="text-4xl md:text-5xl font-serif font-bold mt-4">Rooted in Nature,<br>Powered by Tradition</h1><p class="text-gray-500 max-w-2xl mx-auto mt-4">Modern herbal solutions that honour ancient wisdom</p></div>
-        <div class="grid lg:grid-cols-2 gap-12 items-center mb-20"><div class="about-img-wrapper shadow-xl"><img src="https://lh3.googleusercontent.com/aida/ADBb0uiTSsXPDag3dxfE9HQICn1s392EIAcB20aFxyTvAMA3hZzDQ4QxOWYi7d0GQmjbwxUxjVxsWIBH9ZOrIEtUIw3PZQK4gvwEbl4AptCYVbfSiv2bOLG2UaxMPq4-Huh0qdljnzdSmrMRdo_5QRS1ujGVb0GVi1X1N9Q0hPxr-JkSJQ8OM4FKCv9rDzMcRW4TsyKJaxfSgv7el-Kx-uPjpGNnVHozcqvbu1fpO9rADiGitHNPMYul0OvTeDhmSDAC3r_9MEPnEAAQK4o" alt="Herbal ingredients" class="about-img-fixed"></div><div class="space-y-5"><h2 class="text-2xl font-serif font-semibold">The Heritage Behind Trust Growth</h2><p class="text-gray-700 leading-relaxed">For generations, Indian households have relied on the potent blend of Amla, Bhringraj, Brahmi, and Coconut oil for strong, lustrous hair. Trust Growth was founded to bring this ancient wisdom to the modern world — without any toxins, preservatives, or shortcuts.</p><p class="text-gray-700 leading-relaxed">We cold-press our oils in small batches to preserve every active nutrient. Our shampoo is crafted with gentle, plant-based cleansers that respect your scalp's natural pH. The result? Visible hair health without side effects.</p><div class="flex flex-wrap gap-3 pt-2"><span class="ingredient-badge">🌿 Cold-Pressed</span><span class="ingredient-badge">🍃 Zero Parabens</span><span class="ingredient-badge">💧 Sulphate-Free</span><span class="ingredient-badge">🐚 Cruelty-Free</span></div></div></div>
-        <div class="grid md:grid-cols-3 gap-8 mt-10"><div class="bg-white p-6 rounded-2xl shadow-sm border text-center"><div class="w-16 h-16 bg-[#e9f3e6] rounded-full flex items-center justify-center mx-auto mb-4"><span class="material-symbols-outlined text-3xl text-[#2c5e2f]">verified</span></div><h3 class="font-serif text-xl font-semibold">1000+ Happy Customers</h3><p class="text-gray-500 text-sm mt-2">Across India, from Mumbai to Delhi to Bangalore</p></div><div class="bg-white p-6 rounded-2xl shadow-sm border text-center"><div class="w-16 h-16 bg-[#e9f3e6] rounded-full flex items-center justify-center mx-auto mb-4"><span class="material-symbols-outlined text-3xl text-[#2c5e2f]">eco</span></div><h3 class="font-serif text-xl font-semibold">100% Natural Ingredients</h3><p class="text-gray-500 text-sm mt-2">No mineral oils, no artificial fragrance, no compromise</p></div><div class="bg-white p-6 rounded-2xl shadow-sm border text-center"><div class="w-16 h-16 bg-[#e9f3e6] rounded-full flex items-center justify-center mx-auto mb-4"><span class="material-symbols-outlined text-3xl text-[#2c5e2f]">handshake</span></div><h3 class="font-serif text-xl font-semibold">Ethically Sourced</h3><p class="text-gray-500 text-sm mt-2">Directly from organic farms, supporting local communities</p></div></div>
-        <div class="mt-16 bg-[#2c5e2f] text-white rounded-3xl p-8 md:p-10 text-center"><h2 class="text-2xl md:text-3xl font-serif font-bold">"No shortcuts. Only authentic herbal care."</h2><p class="mt-3 text-white/80 max-w-2xl mx-auto">Every bottle is crafted with the same care as the first one — because your hair deserves the purest nature has to offer.</p><a href="https://wa.me/919768244679" class="inline-block mt-6 bg-white text-[#2c5e2f] px-6 py-2 rounded-full font-semibold">Experience the difference →</a></div>
-      </section>
-    </div>
-
-    <!-- PRODUCTS PAGE -->
-    <div id="page-products" class="page-content hidden">
-      <section class="py-16 px-5 max-w-7xl mx-auto">
-        <div class="text-center mb-12"><span class="text-sm font-bold text-[#2c5e2f] tracking-wider bg-[#e9f3e6] px-4 py-1 rounded-full">Premium Apothecary</span><h1 class="text-4xl md:text-5xl font-serif font-bold mt-3">Our Complete Collection</h1><p class="text-gray-500 max-w-2xl mx-auto mt-3">Thoughtfully formulated for every hair concern — from hair fall to dullness</p><p class="text-sm text-[#2c5e2f] mt-2 flex items-center justify-center gap-1"><span class="material-symbols-outlined text-sm">add_circle</span> New products added regularly</p></div>
-
-        <div class="products-grid" id="allProductsGrid">
-          <div class="bg-white rounded-3xl shadow-sm border overflow-hidden transition hover:shadow-xl"><div class="img-container !rounded-none !p-6 bg-[#fefaf5]"><img src="https://lh3.googleusercontent.com/aida/ADBb0uhKce0bP1rugjGP38NCX4GQivPw5zfdrmwPzKWBKpUIPpvyWjN8MIwI1pAgK9lwTlpt2VgBeW2YKCNYHn_Hh0C9i8dOzgkopFm68lpTwFEn87XgaY5IXLRjKhENFlOe107msk4OIlo5cMJJ2UHHryash3f8bJlYBwaqriPX6ZeV8-rYjrnQVx7OHaLdL4eTZjzYc_gR5O_yzf9qSNggxkwpto1izj6qISpJhARYvppkZNhJVpMDhQC7N0VKOGQ0opJZn2cya3hpSVQ" alt="Herbal Hair Oil"></div><div class="p-6"><div class="text-xs font-bold text-[#2c5e2f] uppercase">HERBAL HAIR OIL</div><h2 class="text-2xl font-serif font-bold mt-1">Nourishing Growth Oil</h2><p class="text-gray-500 text-sm mt-2">Infused with Bhringraj, Amla, and Methi extracts to stimulate follicles, reduce breakage, and add natural shine.</p><div class="mt-4 space-y-2"><div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-[#2c5e2f] text-base">check_circle</span> Reduces hair fall by 78% in 4 weeks*</div><div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-[#2c5e2f] text-base">check_circle</span> Prevents premature greying</div><div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-[#2c5e2f] text-base">check_circle</span> Cold-pressed for maximum potency</div></div><div class="mt-6 flex justify-between items-center"><span class="text-3xl font-bold text-[#2c5e2f]">₹299</span><a href="https://wa.me/919768244679" class="bg-[#2c5e2f] text-white px-6 py-2.5 rounded-full font-semibold">Order Now</a></div></div></div>
-
-          <div class="bg-white rounded-3xl shadow-md border-2 border-[#2c5e2f] overflow-hidden relative transform md:-translate-y-2 transition hover:shadow-xl"><div class="absolute top-4 right-4 bg-[#2c5e2f] text-white px-3 py-1 rounded-full text-xs font-bold">🔥 BEST VALUE</div><div class="img-container !rounded-none !p-6 bg-gradient-to-br from-amber-50 to-white"><img class="combo-zoom" src="https://lh3.googleusercontent.com/aida/ADBb0uiTSsXPDag3dxfE9HQICn1s392EIAcB20aFxyTvAMA3hZzDQ4QxOWYi7d0GQmjbwxUxjVxsWIBH9ZOrIEtUIw3PZQK4gvwEbl4AptCYVbfSiv2bOLG2UaxMPq4-Huh0qdljnzdSmrMRdo_5QRS1ujGVb0GVi1X1N9Q0hPxr-JkSJQ8OM4FKCv9rDzMcRW4TsyKJaxfSgv7el-Kx-uPjpGNnVHozcqvbu1fpO9rADiGitHNPMYul0OvTeDhmSDAC3r_9MEPnEAAQK4o" alt="Ultimate Combo"></div><div class="p-6"><div class="text-xs font-bold text-[#2c5e2f] uppercase">COMPLETE RITUAL</div><h2 class="text-2xl font-serif font-bold mt-1">Ultimate Combo Pack</h2><p class="text-gray-500 text-sm mt-2">The full system: Oil + Shampoo. Designed to work synergistically for faster, visible transformation.</p><div class="mt-4 space-y-2"><div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-[#2c5e2f] text-base">check_circle</span> 2x stronger results*</div><div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-[#2c5e2f] text-base">check_circle</span> Saves ₹49 compared to single items</div><div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-[#2c5e2f] text-base">check_circle</span> Ideal for 60-day course</div></div><div class="mt-6 flex justify-between items-center"><div><span class="text-3xl font-bold text-[#2c5e2f]">₹499</span> <span class="text-sm text-gray-400 line-through">₹548</span></div><a href="https://wa.me/919768244679" class="bg-[#2c5e2f] text-white px-6 py-2.5 rounded-full font-semibold shadow-md">Grab Combo</a></div></div></div>
-
-          <div class="bg-white rounded-3xl shadow-sm border overflow-hidden transition hover:shadow-xl"><div class="img-container !rounded-none !p-6 bg-[#fefaf5]"><img src="https://lh3.googleusercontent.com/aida/ADBb0ugRB_yj7wWHqcn93FVPVk-SqUQTuZXJN70G7o4ptwqORWYJTx3H3IK9Ow1IVuFF40o6nIv8oodIgyZdGWpJOcPx285Ujo6wmH1kGXaT7d0Zu77Hm-gG5i1hNyPF6MTAorzyjRYOaqC5id49khtnrdijsDWbEOkPVb52hAu0qwYS4iwynOu8-Fu3GTWZ5r2P9JHyzrljwv8BZkxg-8yZmaviUjZaPgj7NhJHuy51GqfZcq4v7JN6_nf3f3M6iMgUi3BjMh6InZdg-X8" alt="Herbal Shampoo"></div><div class="p-6"><div class="text-xs font-bold text-[#2c5e2f] uppercase">GENTLE DAILY CLEANSER</div><h2 class="text-2xl font-serif font-bold mt-1">Hydrating Herbal Shampoo</h2><p class="text-gray-500 text-sm mt-2">Sulphate-free, paraben-free formula that cleanses without stripping natural moisture. Ideal for daily use.</p><div class="mt-4 space-y-2"><div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-[#2c5e2f] text-base">check_circle</span> pH balanced for scalp health</div><div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-[#2c5e2f] text-base">check_circle</span> Controls dandruff & itching</div><div class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-[#2c5e2f] text-base">check_circle</span> Enriched with Reetha & Shikakai</div></div><div class="mt-6 flex justify-between items-center"><span class="text-3xl font-bold text-[#2c5e2f]">₹249</span><a href="https://wa.me/919768244679" class="bg-[#2c5e2f] text-white px-6 py-2.5 rounded-full font-semibold">Order Now</a></div></div></div>
-        </div>
-
-        <div class="mt-10 text-center text-sm text-gray-500">*Based on customer self-reported results in 4 weeks of consistent use.</div>
-        <div class="mt-8 text-center"><a href="https://wa.me/919768244679" class="inline-flex items-center gap-2 bg-[#2c5e2f] text-white px-8 py-3 rounded-full font-semibold shadow-md"><span class="material-symbols-outlined">chat</span> Order on WhatsApp →</a></div>
-      </section>
-    </div>
-
-    <!-- REVIEWS PAGE -->
-    <div id="page-reviews" class="page-content hidden"><section class="py-16 px-5 max-w-7xl mx-auto"><div class="text-center mb-12"><span class="text-sm font-bold text-[#2c5e2f] tracking-wider bg-[#e9f3e6] px-4 py-1 rounded-full">Stories of Growth</span><h2 class="text-4xl font-serif font-bold mt-3">Real people, real transformations</h2><div class="flex justify-center items-center gap-2 mt-4"><span class="text-yellow-500 text-xl">★★★★★</span><span class="font-semibold text-lg">4.9/5</span><span class="text-gray-500">based on 1000+ verified reviews</span></div></div><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><div class="testimonial-card p-6"><div class="text-yellow-400 text-lg">★★★★★</div><p class="italic text-gray-700 mt-3">"I was losing clumps of hair every wash. After using Trust Growth oil for 3 weeks, the hair fall has reduced by 80%."</p><p class="mt-4 font-semibold">— Priya S., Mumbai</p></div><div class="testimonial-card p-6"><div class="text-yellow-400 text-lg">★★★★★</div><p class="italic text-gray-700 mt-3">"Dandruff completely gone. The herbal shampoo cleared my scalp within 2 weeks. No itching, no flakes."</p><p class="mt-4 font-semibold">— Rahul K., Bangalore</p></div><div class="testimonial-card p-6"><div class="text-yellow-400 text-lg">★★★★★</div><p class="italic text-gray-700 mt-3">"Affordable luxury. My hairfall has stopped and baby hair is visible along the hairline. Highly recommend!"</p><p class="mt-4 font-semibold">— Anita M., Delhi</p></div><div class="testimonial-card p-6"><div class="text-yellow-400 text-lg">★★★★★</div><p class="italic text-gray-700 mt-3">"Finally a natural product that actually delivers. My hair is soft, bouncy, and full of volume now."</p><p class="mt-4 font-semibold">— Sneha R., Pune</p></div><div class="testimonial-card p-6"><div class="text-yellow-400 text-lg">★★★★★</div><p class="italic text-gray-700 mt-3">"The oil is so lightweight and non-greasy. My hair has never felt this healthy. Thank you Trust Growth!"</p><p class="mt-4 font-semibold">— Vikram S., Chennai</p></div><div class="testimonial-card p-6"><div class="text-yellow-400 text-lg">★★★★★</div><p class="italic text-gray-700 mt-3">"Great for men too! My scalp used to be dry and irritated. The oil has completely changed that."</p><p class="mt-4 font-semibold">— Meera J., Kolkata</p></div></div><div class="mt-12 text-center"><a href="https://wa.me/919768244679" class="inline-block bg-[#2c5e2f] text-white px-8 py-3 rounded-full font-semibold shadow-md">Join 1000+ Happy Customers → Order Now</a></div></section></div>
-
-    <!-- FAQ PAGE - Modern Accordion with Open/Close Feature -->
-      <!-- FAQ PAGE - Modern Accordion with 20 Unique Questions -->
-    <div id="page-faq" class="page-content hidden">
-      <section class="py-16 px-5 max-w-4xl mx-auto">
-        <div class="text-center mb-10">
-          <span class="text-sm font-bold text-[#2c5e2f] tracking-wider bg-[#e9f3e6] px-4 py-1 rounded-full">FAQ</span>
-          <h1 class="text-3xl md:text-4xl font-serif font-bold mt-3">Frequently asked questions</h1>
-          <p class="text-gray-500 mt-2">Everything you need to know about Trust Growth herbal care</p>
-        </div>
-
-        <div class="space-y-4" id="faqAccordion">
-          <!-- FAQ 1 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              What is Trust Growth Herbal Hair Oil?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">Trust Growth Herbal Hair Oil is a plant-based formula designed to nourish the scalp, strengthen hair roots, and support healthier-looking hair.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 2 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              Who can use Trust Growth products?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">Trust Growth Hair Oil and Shampoo are suitable for men and women and for all hair types.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 3 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              How often should I use the hair oil?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">Apply the oil 2–3 times per week for optimal results.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 4 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              What is the correct way to apply the oil?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">Massage gently into the scalp, leave for 2–3 hours or overnight, then wash with Trust Growth Shampoo.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 5 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              Is the shampoo gentle for regular use?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">Yes, the shampoo is mild and suitable for regular use depending on your hair care routine.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 6 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              When can I expect visible improvement?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">Consistent use may show noticeable improvement within 3–4 weeks.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 7 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              Is this suitable for chemically treated or colored hair?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">Yes, the formulation is gentle and suitable for treated or colored hair.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 8 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              Does this help with dandruff?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">The herbal formulation helps maintain a healthy scalp and reduce dandruff.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 9 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              Is this suitable for dry and frizzy hair?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">Yes, the oil helps nourish dry hair and improve manageability.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 10 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              Are Trust Growth products made with herbal ingredients?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">Yes, the products are made using carefully selected herbal ingredients.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 11 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              Is a patch test required before use?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">A patch test is recommended, especially for sensitive scalp.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 12 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              What is the product shelf life?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">The expiry period is 24 months from the manufacturing date.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 13 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              What are the shipping timelines?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">Orders are delivered within 5–7 working days.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 14 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              What payment methods are accepted?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">We accept prepaid orders only through secure online payment options.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 15 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              Is Cash on Delivery available?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">No, Cash on Delivery is not available. Only prepaid orders are processed.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 16 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              Can I use oil and shampoo together?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">Yes, using both together is recommended for best results.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 17 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              Will the oil make my scalp greasy?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">No, when used in the recommended quantity, it absorbs well without heaviness.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 18 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              Do you offer bulk or reseller orders?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">Yes, bulk and reseller inquiries are welcome.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 19 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              Can I cancel my order after payment?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">Orders once confirmed are processed quickly, so cancellation may not always be possible.</p>
-            </div>
-          </div>
-
-          <!-- FAQ 20 -->
-          <div class="faq-item bg-white rounded-2xl border border-[#ede6dd] overflow-hidden transition-all">
-            <button class="faq-question-btn w-full text-left flex justify-between items-center p-5 font-semibold text-gray-800 hover:bg-[#fefaf2] transition">
-              How can I contact customer support?
-              <span class="material-symbols-outlined text-[#2c5e2f] transition-transform duration-300 faq-icon">expand_more</span>
-            </button>
-            <div class="faq-answer-panel max-h-0 overflow-hidden transition-all duration-300 ease-in-out px-5 bg-[#fefcf9] border-t border-transparent">
-              <p class="py-4 text-gray-600">You can reach us through WhatsApp or email.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- CTA Button -->
-        <div class="text-center mt-10">
-          <a href="https://wa.me/919768244679" class="inline-flex items-center gap-2 bg-[#2c5e2f] text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-[#1f4522] transition">
-            <span class="material-symbols-outlined text-base">chat</span>
-            Still have questions? Ask on WhatsApp
-          </a>
-        </div>
-      </section>
-    </div>
-
-    <!-- CONTACT PAGE -->
-    <div id="page-contact" class="page-content hidden"><section class="py-16 px-5 max-w-4xl mx-auto text-center"><h2 class="text-3xl font-serif">Connect With Us</h2><p class="mt-4">📞 WhatsApp: <a href="https://wa.me/919768244679" class="text-[#2c5e2f] font-bold">+91 97682 44679</a></p><p>📸 Instagram: <a href="https://www.instagram.com/trustgrowth.mumbai/" target="_blank" class="text-[#2c5e2f]">@trustgrowth.mumbai</a></p><p>✉️ Email: trustgrowth.support@gmail.com</p><div class="mt-6"><a href="https://wa.me/919768244679" class="bg-[#2c5e2f] text-white px-6 py-2 rounded-full">Chat on WhatsApp</a></div></section></div>
+    <div id="page-container"></div>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-[#1a2a1a] text-gray-300 mt-16 pt-12 pb-6 px-5">
-    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8"><div><div class="text-white text-2xl font-serif">Trust Growth</div><p class="text-sm mt-2">Pure herbal care for modern lives.</p></div><div><h4 class="text-white font-semibold">Explore</h4><ul class="mt-3 space-y-2 text-sm"><li><a href="#" data-nav="home" class="hover:text-white">Home</a></li><li><a href="#" data-nav="about" class="hover:text-white">About</a></li><li><a href="#" data-nav="products" class="hover:text-white">Products</a></li></ul></div><div><h4 class="text-white font-semibold">Support</h4><ul class="mt-3 space-y-2 text-sm"><li><a href="#" data-nav="faq" class="hover:text-white">FAQ</a></li><li><a href="#" data-nav="contact" class="hover:text-white">Contact</a></li><li>Online Payment Only</li></ul></div><div><h4 class="text-white font-semibold">Follow</h4><a href="https://www.instagram.com/trustgrowth.mumbai/" target="_blank" class="inline-flex items-center gap-1 bg-gradient-to-r from-purple-600 to-pink-500 px-4 py-2 rounded-full text-sm">Instagram</a></div></div>
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
+      <div><div class="text-white text-2xl font-serif">Trust Growth</div><p class="text-sm mt-2">Pure herbal care for modern lives.</p></div>
+      <div><h4 class="text-white font-semibold">Explore</h4><ul class="mt-3 space-y-2 text-sm"><li><a href="#" data-nav="home" class="hover:text-white">Home</a></li><li><a href="#" data-nav="about" class="hover:text-white">About</a></li><li><a href="#" data-nav="products" class="hover:text-white">Products</a></li></ul></div>
+      <div><h4 class="text-white font-semibold">Support</h4><ul class="mt-3 space-y-2 text-sm"><li><a href="#" data-nav="faq" class="hover:text-white">FAQ</a></li><li><a href="#" data-nav="contact" class="hover:text-white">Contact</a></li><li>Online Payment Only</li></ul></div>
+      <div><h4 class="text-white font-semibold">Follow</h4><a href="https://www.instagram.com/trustgrowth.mumbai/" target="_blank" class="inline-flex items-center gap-1 bg-gradient-to-r from-purple-600 to-pink-500 px-4 py-2 rounded-full text-sm">Instagram</a></div>
+    </div>
     <div class="text-center text-sm border-t border-gray-700 pt-6 mt-8">© 2025 Trust Growth — Herbally yours.</div>
   </footer>
 </div>
 
-<script>
-  const els = { home: document.getElementById('page-home'), about: document.getElementById('page-about'), products: document.getElementById('page-products'), reviews: document.getElementById('page-reviews'), faq: document.getElementById('page-faq'), contact: document.getElementById('page-contact') };
-  function showPage(p) { Object.keys(els).forEach(k => els[k].classList.add('hidden')); els[p].classList.remove('hidden'); document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(l => { if (l.getAttribute('data-nav') === p) l.classList.add('active'); else l.classList.remove('active'); }); window.scrollTo({ top: 0, behavior: 'smooth' }); }
-  document.querySelectorAll('[data-nav]').forEach(l => l.addEventListener('click', e => { e.preventDefault(); const pg = l.getAttribute('data-nav'); if (pg && els[pg]) showPage(pg); document.getElementById('mobileMenuPanel')?.classList.add('hidden'); }));
-  document.getElementById('mobileMenuBtn')?.addEventListener('click', () => document.getElementById('mobileMenuPanel')?.classList.toggle('hidden'));
-  document.querySelectorAll('.view-all-products-btn').forEach(btn => btn.addEventListener('click', e => { e.preventDefault(); showPage('products'); }));
-  showPage('home');
-
-  // ========== FAQ ACCORDION FUNCTIONALITY ==========
-  // Initialize all FAQ panels to be closed
-  document.querySelectorAll('.faq-answer-panel').forEach(panel => {
-    panel.style.maxHeight = '0';
-    panel.style.borderTopColor = 'transparent';
-  });
-  
-  // Add click handlers to all FAQ buttons
-  document.querySelectorAll('.faq-question-btn').forEach(button => {
-    button.addEventListener('click', () => {
-      const answerPanel = button.nextElementSibling;
-      const icon = button.querySelector('.faq-icon');
-      const isOpen = answerPanel.style.maxHeight !== '0px' && answerPanel.style.maxHeight !== '';
-      
-      // Close all other FAQ items (keeps only one open)
-      document.querySelectorAll('.faq-question-btn').forEach(otherBtn => {
-        if (otherBtn !== button) {
-          const otherPanel = otherBtn.nextElementSibling;
-          const otherIcon = otherBtn.querySelector('.faq-icon');
-          if (otherPanel && otherPanel.style.maxHeight !== '0px') {
-            otherPanel.style.maxHeight = '0';
-            otherPanel.style.borderTopColor = 'transparent';
-            if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
-          }
-        }
-      });
-      
-      // Toggle current FAQ
-      if (!isOpen) {
-        answerPanel.style.maxHeight = answerPanel.scrollHeight + 'px';
-        answerPanel.style.borderTopColor = '#ede6dd';
-        if (icon) icon.style.transform = 'rotate(180deg)';
-      } else {
-        answerPanel.style.maxHeight = '0';
-        answerPanel.style.borderTopColor = 'transparent';
-        if (icon) icon.style.transform = 'rotate(0deg)';
-      }
-    });
-  });
-</script>
+<script src="/js/loader.js"></script>
 </body>
 </html>
