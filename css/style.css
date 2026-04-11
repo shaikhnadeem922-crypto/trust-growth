@@ -96,7 +96,7 @@ h1, h2, h3, h4, .logo-font, .serif {
 
 /* SHAMPOO ZOOM OUT */
 .zoom-out {
-  transform: scale(0.86) !important; /* 🔥 stronger zoom out */
+  transform: scale(0.80) !important; /* 🔥 stronger zoom out */
 }
 
 /* COMBO */
