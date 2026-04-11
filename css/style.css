@@ -41,7 +41,8 @@ h1, h2, h3, h4, .logo-font, .serif {
   border-radius: 28px;
   transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
   border: 1px solid rgba(44, 94, 47, 0.08);
-  overflow: hidden; /* 🔥 ensures perfect rounded corners */
+  overflow: hidden;
+  position: relative; /* 🔥 needed for badge */
 }
 
 .product-card:hover {
@@ -50,39 +51,53 @@ h1, h2, h3, h4, .logo-font, .serif {
   border-color: rgba(44, 94, 47, 0.2);
 }
 
-/* IMAGE CONTAINER (FIXED) */
+/* BADGE (FIXED) */
+.badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--green-deep);
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-weight: 600;
+  z-index: 10; /* 🔥 always on top */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* IMAGE CONTAINER */
 .img-container {
   width: 100%;
   aspect-ratio: 1 / 1;
   border-radius: 28px;
   overflow: hidden;
-  padding: 0; /* removed gap */
+  padding: 0;
   background: none;
-  position: relative;
 }
 
-/* IMAGE FIX */
+/* IMAGE FIX (BALANCED ZOOM) */
 .img-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 🔥 main fix */
+  object-fit: cover;
   display: block;
-  transform: scale(1.08); /* 🔥 fixes small-looking images */
+  transform: scale(1.03); /* 🔥 reduced zoom */
   transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 
 /* HOVER ZOOM */
 .product-card:hover .img-container img {
-  transform: scale(1.12);
+  transform: scale(1.06);
 }
 
-/* COMBO SPECIAL ZOOM */
+/* COMBO SPECIAL */
 .combo-zoom {
   transition: transform 0.4s ease;
 }
 
 .product-card.featured:hover .combo-zoom {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 /* ABOUT IMAGE */
@@ -173,12 +188,8 @@ h1, h2, h3, h4, .logo-font, .serif {
 
 /* MARQUEE */
 @keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
 }
 
 .animate-marquee {
