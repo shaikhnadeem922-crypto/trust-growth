@@ -76,7 +76,7 @@ h1, h2, h3, h4, .logo-font, .serif {
   background: none !important;
 }
 
-/* IMAGE FULL COVER (PRODUCTS ONLY) */
+/* PRODUCT IMAGES */
 .img-container img,
 .product-image-wrapper img {
   width: 100%;
@@ -108,32 +108,28 @@ h1, h2, h3, h4, .logo-font, .serif {
 }
 
 /* ========================================= */
-/* ✅ ABOUT - FIXED (ONLY THIS SECTION) */
+/* ✅ ABOUT SECTION - FINAL PERFECT FIX */
 /* ========================================= */
 
 .about-img-wrapper {
   aspect-ratio: 4/3;
   border-radius: 28px;
   overflow: hidden;
-  background: #f8faf8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
 }
 
-.about-img-wrapper:hover {
-  transform: translateY(-4px);
-}
-
-/* ONLY About image (no impact elsewhere) */
+/* ONLY About image */
 .about-img-wrapper .about-img-fixed {
   width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 20px;
+  height: 100%;
+  object-fit: cover;              /* 🔥 no white space */
+  object-position: center 20%;    /* 🔥 focus on bottles */
+  transform: scale(1.05);         /* 🔥 slight zoom */
+  transition: transform 0.4s ease;
+}
+
+/* hover effect */
+.about-img-wrapper:hover .about-img-fixed {
+  transform: scale(1.08);
 }
 
 /* NAV */
