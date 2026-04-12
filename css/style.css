@@ -114,20 +114,21 @@ h1, h2, h3, h4, .logo-font, .serif {
 .about-img-wrapper {
   border-radius: 28px;
   overflow: hidden;
-  background: transparent; /* no white bg */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08); /* 🔥 premium shadow */
 }
 
-/* ONLY About image */
+/* PERFECT IMAGE */
 .about-img-wrapper .about-img-fixed {
   width: 100%;
-  height: auto;        /* ✅ key fix */
+  height: auto;          /* ✅ full image visible */
   display: block;
   border-radius: 28px;
+  will-change: transform;
 }
 
-/* hover effect */
+/* subtle hover (safe) */
 .about-img-wrapper:hover .about-img-fixed {
-  transform: scale(1.08);
+  transform: scale(1.02); /* 🔥 very slight zoom */
 }
 
 /* NAV */
