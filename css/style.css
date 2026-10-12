@@ -263,6 +263,11 @@ h1, h2, h3, h4, .logo-font, .serif {
   object-position: center;
 }
 
+.review-slide-image--feedback {
+  object-fit: contain;
+  background: #f9f5ef;
+}
+
 .review-slide-content {
   display: flex;
   flex: 1 0 auto;

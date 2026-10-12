@@ -46,17 +46,16 @@ document.addEventListener("DOMContentLoaded", () => {
   initReviewListing();
 });
 
-// These 10 entries are fictional preview examples. They are visible only on file:// and localhost previews.
-// For real reviews, replace the example content, set isExample: false and published: true after approval.
-// Product images are illustrative product photos, not customer photos. Leave date blank unless verified.
-const reviewEntries =const reviewEntries = [
+// Approved customer reviews may use an image containing the feedback and leave the text field empty.
+// Set published: true only after approval; dates are optional and must be verified.
+const reviewEntries = [
   { name: "Adv Suhail Shekason", product: "Ultimate Combo Pack", image: "images/products/one.jpg", description: "", rating: 5, date: "", feedback: "", published: true, isExample: false },
   { name: "Shumaiza khan", product: "Ultimate Combo Pack", image: "images/products/two.jpg", description: "", rating: 4, date: "", feedback: "", published: true, isExample: false },
   { name: "Aiman Shaikh", product: "Herbal Hair Oil, 100 ml", image: "images/products/three.jpg", description: "", rating: 5, date: "", feedback: "", published: true, isExample: false },
   { name: "Khlida", product: "Herbal Hair Oil, 100 ml", image: "images/products/four.jpg", description: "", rating: 4, date: "", feedback: "", published: true, isExample: false },
   { name: "Gunchan", product: "Ultimate Combo Pack", image: "images/products/five.jpg", description: "", rating: 5, date: "", feedback: "", published: true, isExample: false },
   { name: "Rizwana ", product: "2X Hair Care Combo", image: "images/products/six.jpg", description: "", rating: 5, date: "", feedback: "", published: true, isExample: false },
-  { name: "Sajiya parween", product: "Ultimate Combo Pack", image: "images/products/seven.jpg", description: "", rating: 4, date: "", feedback: "", published: true, isExample: false },
+  { name: "Sajiya parween", product: "Herbal Hair Oil, 100 ml", image: "images/products/seven.jpg", description: "", rating: 4, date: "", feedback: "", published: true, isExample: false },
   { name: "Muhammad Osama", product: "2X Hair Care Combo", image: "images/products/eight.jpg", description: "", rating: 5, date: "", feedback: "", published: true, isExample: false },
   { name: "Rashmi", product: "2X Hair Care Combo", image: "images/products/nine.jpg", description: "", rating: 4, date: "", feedback: "", published: true, isExample: false },
   { name: "Abhilasha Mhatre", product: "Ultimate Combo Pack", image: "images/products/ten.jpg", description: "", rating: 5, date: "", feedback: "", published: true, isExample: false }
@@ -72,7 +71,7 @@ function isCompleteReview(review) {
     typeof review.product === "string" && review.product.trim() &&
     typeof review.image === "string" && review.image.trim() &&
     Number.isInteger(review.rating) && review.rating >= 1 && review.rating <= 5 &&
-    typeof review.feedback === "string" && review.feedback.trim();
+    typeof review.feedback === "string";
 }
 
 function getReviewsForDisplay() {
@@ -96,10 +95,15 @@ function buildReviewCard(review) {
   const media = document.createElement("div");
   media.className = "review-slide-media";
 
+  const hasTextFeedback = typeof review.feedback === "string" && review.feedback.trim().length > 0;
   const image = document.createElement("img");
-  image.className = "review-slide-image";
+  image.className = hasTextFeedback
+    ? "review-slide-image"
+    : "review-slide-image review-slide-image--feedback";
   image.src = review.image;
-  image.alt = `Product photo for ${review.product}; not a customer photo`;
+  image.alt = hasTextFeedback
+    ? `Product photo for ${review.product}`
+    : `Customer feedback image for ${review.product}`;
   image.loading = "lazy";
   media.appendChild(image);
 
@@ -131,7 +135,8 @@ function buildReviewCard(review) {
   feedback.className = "review-slide-feedback";
   feedback.textContent = review.feedback;
 
-  content.append(product, name, meta, feedback);
+  content.append(product, name, meta);
+  if (hasTextFeedback) content.appendChild(feedback);
   card.append(media, content);
   return card;
 }
